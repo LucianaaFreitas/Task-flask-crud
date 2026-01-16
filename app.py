@@ -20,7 +20,7 @@ def create_task():
   task_id_control += 1
   tasks.append(new_task)
   print(tasks)
-  return jsonify({"mensagem":"Nova tarefa criada com sucesso"})
+  return jsonify({"mensagem":"Nova tarefa criada com sucesso", "id": new_task.id})
 
 # Read (ler as atividades)
 @app.route('/tasks', methods= ['GET'])
